@@ -14,6 +14,7 @@ namespace MoodAnalyzer
         {
             if (mood.ToLower().Contains("happy"))
             {
+                Console.WriteLine("I m in Any Mood");
                 Console.WriteLine(Happy_Mood);
                 return mood;
             }

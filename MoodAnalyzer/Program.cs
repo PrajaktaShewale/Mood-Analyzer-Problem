@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Welcome to Mood Anlyzer");
         AnalyzeMood mo = new AnalyzeMood();
-        mo.Mood("sad");
+        mo.Mood("happy");
     }
 
 }

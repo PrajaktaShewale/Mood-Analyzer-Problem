@@ -11,8 +11,8 @@ namespace TestProject1
             const string happymood = "Happy";
             const string sadmood = "Sad";
             AnalyzeMood mood = new AnalyzeMood();
-            string Actualresult = mood .Mood(sadmood);
-            string expected = "Sad";
+            string Actualresult = mood .Mood(happymood);
+            string expected = "Happy";
             Assert.AreEqual(expected, Actualresult);
             
         }
