@@ -8,13 +8,24 @@ namespace TestProject1
         [TestMethod]
         public void GiveMoodShouldReturnSadMood()
         {
-            const string happymood = "Happy";
-            const string sadmood = "Sad";
-            AnalyzeMood mood = new AnalyzeMood();
-            string Actualresult = mood .Mood(happymood);
-            string expected = "Happy";
-            Assert.AreEqual(expected, Actualresult);
+            //arrange
+            string sadmood = "Sad";
+            string message = "I m In Sad Mood";
+            AnalyzeMood mo = new AnalyzeMood(message);
+            //act
+            string mood = mo.MoodAnalyzer();           
+            //assert
+            Assert.AreEqual(sadmood.ToLower(), mood.ToLower());
             
+        }
+        [TestMethod]
+        public void ForAnyMoodReturnHappyMood()
+        {
+            string happymood = "Happy";
+            string message = "I m In Happy Mood";
+            AnalyzeMood mo = new AnalyzeMood(message);
+            string mood = mo.MoodAnalyzer();
+            Assert.AreEqual(happymood.ToLower(), mood.ToLower());
         }
     }
 }
